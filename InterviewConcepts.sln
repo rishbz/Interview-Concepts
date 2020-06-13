@@ -1,0 +1,150 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunTimePolymorphism", "RunTimePolymorphism\RunTimePolymorphism.csproj", "{2A328179-6169-48D6-8EA1-C6A2A10E34B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{98552198-0F90-4E6D-90AB-2C6DEBEE1D05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{0BFFEF45-2965-4BD7-B6AD-A31178BD7D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientForWCFService", "ClientForWCFService\ClientForWCFService.csproj", "{C54428C3-B06B-4199-B212-94F06B5B97F5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0BFFEF45-2965-4BD7-B6AD-A31178BD7D68} = {0BFFEF45-2965-4BD7-B6AD-A31178BD7D68}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{7A41E4B2-FDED-4741-81FB-F56C5A0F1805}"
+	ProjectSection(SolutionItems) = preProject
+		SOA learning.txt = SOA learning.txt
+		WCF learning.txt = WCF learning.txt
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "MyWebService", "http://localhost:4394", "{A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_4394"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\MyWebService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4394\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_4394"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\MyWebService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_4394\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\MyWebService\"
+		DefaultWebSiteLanguage = "Visual Basic"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebService", "WebService", "{BEED901F-BAA5-46D0-A2F0-3043FCDBD5EB}"
+	ProjectSection(SolutionItems) = preProject
+		SOAP learning with example.txt = SOAP learning with example.txt
+		Web Service learning.txt = Web Service learning.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientConsumingWebService", "ClientConsumingWebService\ClientConsumingWebService.csproj", "{8F4DA68F-D484-4CD7-AF89-F3C6DA1B85E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A} = {A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{0053FEE2-7DF4-44C6-9DB5-25C5D9FCC41F}"
+	ProjectSection(SolutionItems) = preProject
+		REST.txt = REST.txt
+		Web Api learning.txt = Web Api learning.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebApi", "MyWebApi\MyWebApi.csproj", "{AEDDD24F-EA62-4C31-9AEC-C81490AB452A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientForWebAPI", "ClientForWebAPI\ClientForWebAPI.csproj", "{31F29A84-1A3B-4793-9FFB-1E13F694D0B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApplication", "MvcApplication\MvcApplication.csproj", "{A1A776E7-9A69-42C7-A136-EA69A5F55503}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learning", "Learning", "{11B678FC-D338-4FC9-BDC6-E420296CEDD9}"
+	ProjectSection(SolutionItems) = preProject
+		RunTimePolymorphism\HTTPHandlers VS Module.txt = RunTimePolymorphism\HTTPHandlers VS Module.txt
+		Interface VS Abstract.txt = Interface VS Abstract.txt
+		Oops.txt = Oops.txt
+		ProjectsForInterview.txt = ProjectsForInterview.txt
+		REST.txt = REST.txt
+		SOA learning.txt = SOA learning.txt
+		SOAP learning with example.txt = SOAP learning with example.txt
+		String Immutability.txt = String Immutability.txt
+		RunTimePolymorphism\W3WP worker process.txt = RunTimePolymorphism\W3WP worker process.txt
+		WCF learning.txt = WCF learning.txt
+		Web Api learning.txt = Web Api learning.txt
+		Web Service learning.txt = Web Service learning.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdpartyWebAPI", "..\ThirdPartyWebApiSolution\ThirdpartyWebAPI\ThirdpartyWebAPI.csproj", "{5FCC3F23-53D2-4B64-921B-10DD81B26694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHosting", "..\ThirdPartyWebApiSolution\SelfHosting\SelfHosting.csproj", "{2DDFA6B1-4ACB-4B0F-A3E0-AD642E749338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A328179-6169-48D6-8EA1-C6A2A10E34B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A328179-6169-48D6-8EA1-C6A2A10E34B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A328179-6169-48D6-8EA1-C6A2A10E34B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A328179-6169-48D6-8EA1-C6A2A10E34B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98552198-0F90-4E6D-90AB-2C6DEBEE1D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98552198-0F90-4E6D-90AB-2C6DEBEE1D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98552198-0F90-4E6D-90AB-2C6DEBEE1D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98552198-0F90-4E6D-90AB-2C6DEBEE1D05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BFFEF45-2965-4BD7-B6AD-A31178BD7D68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BFFEF45-2965-4BD7-B6AD-A31178BD7D68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BFFEF45-2965-4BD7-B6AD-A31178BD7D68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BFFEF45-2965-4BD7-B6AD-A31178BD7D68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C54428C3-B06B-4199-B212-94F06B5B97F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C54428C3-B06B-4199-B212-94F06B5B97F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C54428C3-B06B-4199-B212-94F06B5B97F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C54428C3-B06B-4199-B212-94F06B5B97F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8F4DA68F-D484-4CD7-AF89-F3C6DA1B85E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4DA68F-D484-4CD7-AF89-F3C6DA1B85E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4DA68F-D484-4CD7-AF89-F3C6DA1B85E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4DA68F-D484-4CD7-AF89-F3C6DA1B85E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEDDD24F-EA62-4C31-9AEC-C81490AB452A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEDDD24F-EA62-4C31-9AEC-C81490AB452A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEDDD24F-EA62-4C31-9AEC-C81490AB452A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEDDD24F-EA62-4C31-9AEC-C81490AB452A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F29A84-1A3B-4793-9FFB-1E13F694D0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F29A84-1A3B-4793-9FFB-1E13F694D0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F29A84-1A3B-4793-9FFB-1E13F694D0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F29A84-1A3B-4793-9FFB-1E13F694D0B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A776E7-9A69-42C7-A136-EA69A5F55503}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A776E7-9A69-42C7-A136-EA69A5F55503}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A776E7-9A69-42C7-A136-EA69A5F55503}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A776E7-9A69-42C7-A136-EA69A5F55503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCC3F23-53D2-4B64-921B-10DD81B26694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCC3F23-53D2-4B64-921B-10DD81B26694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCC3F23-53D2-4B64-921B-10DD81B26694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCC3F23-53D2-4B64-921B-10DD81B26694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDFA6B1-4ACB-4B0F-A3E0-AD642E749338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDFA6B1-4ACB-4B0F-A3E0-AD642E749338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDFA6B1-4ACB-4B0F-A3E0-AD642E749338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDFA6B1-4ACB-4B0F-A3E0-AD642E749338}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BFFEF45-2965-4BD7-B6AD-A31178BD7D68} = {7A41E4B2-FDED-4741-81FB-F56C5A0F1805}
+		{C54428C3-B06B-4199-B212-94F06B5B97F5} = {7A41E4B2-FDED-4741-81FB-F56C5A0F1805}
+		{A6D95DBB-757A-440A-8E05-C8D7C4B1AB4A} = {BEED901F-BAA5-46D0-A2F0-3043FCDBD5EB}
+		{8F4DA68F-D484-4CD7-AF89-F3C6DA1B85E9} = {BEED901F-BAA5-46D0-A2F0-3043FCDBD5EB}
+		{AEDDD24F-EA62-4C31-9AEC-C81490AB452A} = {0053FEE2-7DF4-44C6-9DB5-25C5D9FCC41F}
+		{31F29A84-1A3B-4793-9FFB-1E13F694D0B5} = {0053FEE2-7DF4-44C6-9DB5-25C5D9FCC41F}
+	EndGlobalSection
+EndGlobal

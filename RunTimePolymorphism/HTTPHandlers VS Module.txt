@@ -1,0 +1,45 @@
+﻿https://www.dotnetcurry.com/aspnet/1264/aspnet-http-handlers-http-modules
+
+https://stackoverflow.com/questions/6449132/http-handler-vs-http-module
+
+HttpHandler is where the request train is headed. HttpModule is a station along the way.
+
+The prime and common goal of HttpHandler and HttpModule is to inject pre-processing logic before the ASP.NET request reaches the IIS Server.
+
+ASP.NET provides two ways of injecting logic in the request pipeline;
+
+Http Handlers: Http Handler helps us to inject pre-processing logic based on the extension of the file name requested. 
+ASP.NET uses HTTP handlers for implementing a lot of its own functionality.For example, ASP.NET uses handlers for processing .aspx, .asmx 
+and trace.axd files.
+example: RSS feeds: To create an RSS feed for a Web site, you can create a handler that emits RSS-formatted XML. 
+So when users send a request to your site that ends in .rss, ASP.NET calls your handler to process the request.
+
+There are three steps involved in creating Handler 
+1. Implement IHttpHandler interface.
+2. Register handler in web.config or machine.config file. 
+3. Map the file extension (*.arshad) to aspnet_isapi.dll in the IIS.
+
+IHttpHandler interface has ProcessRequest method and IsReusable property which needs to be implemented. 
+ProcessRequest: In this method, you write the code that produces the output for the handler. 
+IsResuable: This property tells whether this handler can be reused or not.
+
+You can register the handler in web.config file like this
+
+<httpHandlers>
+   <add verb="*" path="*.arshad" type="namespace.classname, assemblyname" />
+</httpHandlers>
+Note: here we are handling any file name with extension arshad.
+
+Http Modules: HttpModule is an event based processor to inject pre-processing logic before the request reaches the IIS Server. 
+ASP.NET uses HTTP Module to implement lots of its own functionality like authentication and authorization, session management 
+and output caching etc.
+ASP.NET engine emits lot of events as the request passess through the request pipeline. 
+Some of those events are AuthenticateRequest, AuthorizeRequest, BeginRequest, EndRequest. 
+By Using HttpModule you can write logic in these events. These logic get executed as the events fire and 
+before the request reaches IIS.
+
+There are two steps involved in creating Modules, 1. Implement IHttpModule interface 2. Register module in web.config 
+or machine.config file
+
+example: Security: Using HTTP module, you can perform custom authentication or other security checks before the request 
+reaches IIS.

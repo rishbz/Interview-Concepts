@@ -1,0 +1,25 @@
+﻿When Application pool receive the request, it simply pass the request to worker process (w3wp.exe).
+The worker process“w3wp.exe” looks up the URL of the request in order to load the correct ISAPI extension. 
+ISAPI extensions are the IIS way to handle requests for different resources. Once ASP.NET is installed, 
+it installs its own ISAPI extension (aspnet_isapi.dll)and adds the mapping into IIS.  
+
+When Worker process loads the aspnet_isapi.dll, it start an HTTPRuntime, which is the entry point of an application.
+HTTPRuntime is a class which calls the ProcessRequest method to start Processing.
+
+When this methods called, a new instance of HTTPContext is been created.  Which is accessible using 
+HTTPContext.Current Properties.
+This object still remains alive during life time of object request.  
+Using HttpContext.Current we can access some other objects like Request, Response, Session etc.
+
+After that HttpRuntime load an HttpApplication object with the help of  HttpApplicationFactory class.
+Each and every request should pass through the corresponding HTTPModule to reach to HTTPHandler,
+this list of module are configured by the HTTPApplication.
+
+Now, the concept comes called “HTTPPipeline”. It is called a pipeline because it contains a set of HttpModules 
+( For Both Web.config and Machine.config level) that intercept the request on its way to the HttpHandler. 
+HTTPModules are classes that have access to the incoming request. 
+We can also create our own HTTPModule if we need to handle anything during upcoming request and response.
+
+
+
+http://aspnetnova.blogspot.com/2011/12/how-iis-process-for-aspnet-requests.html

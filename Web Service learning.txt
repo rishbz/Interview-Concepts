@@ -1,0 +1,15 @@
+Web Service
+
+It is based on SOAP and return data in XML form.
+It support only HTTP protocol.
+It is not open source but can be consumed by any client that understands xml.
+It can be hosted only on IIS.
+
+By adding a service reference, we created a proxy class of the referenced service to the current project (client app). 
+The proxy class wraps the calls to the web service's methods. It takes care of generating the correct SOAP message format 
+and managing the transmission of the messages over the network using HTTP and 
+converting the results received back to the corresponding .NET data types. 
+
+In our example, we ourselves created SOAP request instead of creating proxy class by adding service reference.
+
+How host a web service on IIS ? -we are yet to look at 

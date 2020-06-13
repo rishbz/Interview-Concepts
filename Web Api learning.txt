@@ -1,0 +1,65 @@
+Whatever be the type of ASP.Net website you opt to develop whether MVC or Web Forms website, AJAX is required.
+A web API can help you develop ASP.NET application via AJAX. Using a web API framework, one can easily create services that
+can run on various entities. 
+Hence, web API makes it easier for the developers to build an ASP.NET application that is compatible with any browser 
+and almost any device.
+With Web API, you get access to entire features of HTTP like URIs, request/response headers, content formatting, caching etc., 
+and hence, as compared to WCF rest services (which require defining extra config settings for different devices), 
+it is much easier to develop ASP.NET web applications using RESTful web services through Web APIs.
+
+
+Web API
+
+This is the new framework for building HTTP services with easy and simple way.
+Web API is open source an ideal platform for building REST-ful services over the .NET Framework.
+Unlike WCF Rest service, it use the full feature of HTTP (like URIs, request/response headers, caching, versioning, various content formats)
+It also supports the MVC features such as routing, controllers, action results, filter, model binders, IOC container or dependency injection,
+unit testing that makes it more simple and robust.
+It can be hosted with in the application or on IIS.
+It is light weight architecture and good for devices which have limited bandwidth like smart phones.
+Responses are formatted by Web API’s MediaTypeFormatter into JSON, XML or whatever format you want to add as a MediaTypeFormatter.
+
+To whom choose between WCF or WEB API
+
+Choose WCF when you want to create a service that should support special scenarios such as one way messaging, message queues, 
+duplex communication etc.
+Choose WCF when you want to create a service that can use fast transport channels when available, such as TCP, Named Pipes, 
+or maybe even UDP (in WCF 4.5), and you also want to support HTTP when all other transport channels are unavailable.
+Choose Web API when you want to create a resource-oriented services over HTTP that can use the full features of HTTP 
+(like URIs, request/response headers, caching, versioning, various content formats).
+Choose Web API when you want to expose your service to a broad range of clients including browsers, mobiles, iphone and tablets.
+
+In the scenarios listed below you should go for WCF:
+If you need to send data on protocols like TCP, MSMQ or MIME
+If the consuming client just knows how to consume SOAP messages
+
+
+WEB API is a framework for developing RESTful/HTTP services.
+There are so many clients that do not understand SOAP like Browsers, HTML5, in those cases WEB APIs are a good choice.HTTP services header
+specifies how to secure service, how to cache the information, type of the message body and HTTP body can specify any type of content like
+HTML not just XML as SOAP services.
+
+https://stackoverflow.com/questions/43775132/difference-between-wcf-web-api-wcf-rest-and-web-service
+
+WCF is used for SOAP and Web API for REST(https://stackoverflow.com/questions/9348639/wcf-vs-asp-net-web-api)
+
+[FromBody] use hoga jab primitive datatype ko me body se 
+bhejna cahta hu kyuki by default primitve type hmesha
+URI se uthane ki koshish krega.
+[Frombody] sirf ek parameter k liye chalega 2 k liye nai
+
+[Fromuri]  use kro jab complex type ko me URI se bhejna 
+cahta hu bcz by default complex type body se aayega..which means when sending complex type you dont explictly need to specify FromBody
+
+Postman me body section ese leye hota he tanki frombody
+vala cheez kr sakein.
+
+HTTPOnly is true significance at cookie level :
+https://blog.codinghorror.com/protecting-your-cookies-httponly/
+
+Cookie headers very interesting & important:
+https://odino.org/security-hardening-http-cookies/
+
+Good source to learn c# concepts : https://www.csharpstar.com/csharp-knapsack-problem/
+
+Routing: https://www.tutorialsteacher.com/webapi/web-api-routing

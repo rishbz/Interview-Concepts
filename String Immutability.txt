@@ -1,0 +1,18 @@
+string b = "h";
+b += "ello";
+
+Strings are immutable--the contents of a string object cannot be changed after the object is created, 
+although the syntax makes it appear as if you can do this. For example, when you write this code,
+the compiler actually creates a new string object to hold the new sequence of characters, and that new object is assigned to b. 
+The memory that had been allocated for b (when it contained the string "h") is then eligible for garbage collection.
+
+https://docs.microsoft.com/en-gb/dotnet/csharp/language-reference/builtin-types/reference-types
+
+string tst = "hey";
+
+            string tst1 = "hey1";
+            tst1 = tst;
+            var check= object.ReferenceEquals(tst, tst1);
+https://www.c-sharpcorner.com/uploadfile/c210df/how-memory-is-managed-by-stack-and-heap/
+
+https://blog.maartenballiauw.be/post/2016/11/15/exploring-memory-allocation-and-strings.html

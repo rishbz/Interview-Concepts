@@ -1,0 +1,17 @@
+
+Interview project done preperation:
+
+- Cookie bug httpoly true
+- Bytes issue when opening document streaming
+- isoneway = true stuff
+- sorting a column based on DataTables concept
+- RL cache invalidation story
+
+INterview -
+
+- SOLID
+- REST Web API
+- Design patterns
+- Documention
+- TDD
+- Code reviews

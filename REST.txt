@@ -1,0 +1,29 @@
+https://symfonycasts.com/screencast/rest/rest
+
+https://www.oreilly.com/learning/how-to-design-a-restful-api-architecture-from-a-human-language-spec
+
+REST is always stateless. It's a state transfer.It is not server responsibility to hold on state using sessions.It client responsibility.
+We use rest as it is light weighted. Millions of users hitting REST service as server is not saving any STATE or session management
+
+Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request,
+it includes all information necessary for the server to fulfill that request. The server never relies on information 
+from previous requests. 
+If that information was important, the client would have sent it again in this request.
+
+Application State vs Resource State
+Please do not confuse between application state and resource state. Both are completely different things.
+
+Application state is server-side data which servers store to identify incoming client requests, their previous interaction details,
+and current context information.
+
+Resource state is the current state of a resource on a server at any point of time – and it has nothing to do with the interaction
+between client and server. It is what you get as a response from the server as API response. You refer to it as resource representation.
+
+REST statelessness means being free on application state. That means we do return response from server to client. Stateless says that we just
+dont store data in server.
+
+https://restfulapi.net/statelessness/
+
+https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#sec_5_1_3
+
+Good details:https://www.quora.com/Why-is-REST-web-service-always-stateless

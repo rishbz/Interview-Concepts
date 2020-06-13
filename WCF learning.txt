@@ -1,0 +1,77 @@
+WCF stands for ‘Windows Communication Foundation’. It is a Microsoft platform for building distributed and interoperable applications.
+https://www.c-sharpcorner.com/article/what-is-wcf-why-should-we-use-wcf/
+
+WCF
+
+It is also based on SOAP and return data in XML form.
+It is the evolution of the web service(ASMX) and support various protocols like TCP, HTTP, HTTPS, Named Pipes, MSMQ.
+The main issue with WCF is, its tedious and extensive configuration.
+It is not open source but can be consumed by any client that understands xml.
+It can be hosted with in the applicaion or on IIS or using window service.
+The client calling our server's service will have endpoint adress of service under client tag.
+
+WCF Rest
+
+To use WCF as WCF Rest service you have to enable webHttpBindings.
+It support HTTP GET and POST verbs by [WebGet] and [WebInvoke] attributes respectively.
+To enable other HTTP verbs you have to do some configuration in IIS to accept request of that particular verb on .svc files
+Passing data through parameters using a WebGet needs configuration. The UriTemplate must be specified.
+It support XML, JSON and ATOM data format.
+Example: https://www.c-sharpcorner.com/article/wcf-restful-service/
+
+Type of WCF Binding:
+
+Basic binding
+ 
+This binding is provided by the BasicHttpBinding class. It is designed to expose a WCF service as an ASMX web service, 
+so that old clients (that are still using an ASMX web service) can consume the new service. 
+By default, it uses the HTTP protocol for transport and encodes the message in UTF-8 text format. You can also use HTTPS with this binding.
+ 
+Web binding
+ 
+This binding is provided by the WebHttpBinding class. It is designed to expose WCF services as HTTP requests using HTTP-GET and HTTP-POST. 
+It is used with REST based services that may provide output in XML or JSON format. 
+This is very much used with social networks for implementing a syndication feed.
+ 
+Web Service (WS) binding
+ 
+This binding is provided by the WSHttpBinding class. It is like a basic binding and uses HTTP or HTTPS protocols for transport. But this is designed to offer various WS - * specifications such as WS – Reliable Messaging, WS - Transactions, WS - Security and so on which are not supported by Basic binding.
+ 
+wsHttpBinding= basicHttpBinding + WS-* specification
+ 
+WS Dual binding
+ 
+This binding is provided by the WsDualHttpBinding class. It is like a WsHttpBinding except it supports bi-directional communication which means both clients and services can send and receive messages.
+ 
+TCP binding
+ 
+This binding is provided by the NetTcpBinding class. 
+It uses TCP protocol for communication between two machines within intranet (means same network). 
+It encodes the message in binary format. This is a faster and more reliable binding compared to the HTTP protocol bindings. 
+It is only used when the communication is WCF-to-WCF which means both client and service should have WCF.
+
+NetNamedPipeBinding: 
+Uses the .NET Framework to connect to other WCF endpoints on the same machine.
+ 
+IPC binding
+ 
+This binding is provided by the NetNamedPipeBinding class. It uses named pipe for communication between two services on the same machine. This is the most secure and fastest binding among all the bindings.
+ 
+MSMQ binding
+ 
+This binding is provided by the NetMsmqBinding class. It uses MSMQ for transport and offers support to a disconnected message queued. 
+It provides solutions for disconnected scenarios in which the service processes the message at a different time than the client sending the messages.
+ 
+Federated WS binding
+ 
+This binding is provided by the WSFederationHttpBinding class. It is a specialized form of WS binding and provides support to federated security.
+ 
+Peer Network binding
+ 
+This binding is provided by the NetPeerTcpBinding class. It uses the TCP protocol, but uses peer networking as transport. 
+In this networking each machine (node) acts as a client and a server to the other nodes. 
+This is used in the file sharing systems like a Torrent.
+ 
+MSMQ Integration binding
+ 
+This binding is provided by the MsmqIntegrationBinding class. It offers support to communicate with existing systems that communicate via MSMQ.

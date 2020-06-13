@@ -1,0 +1,46 @@
+https://www.codeproject.com/Articles/515253/Service-Oriented-Architecture-and-WCF-2
+
+
+SOA is way to develop service oriented applications and WCF is technology which can be used to develop service oriented applications. 
+BUT SOA defines strict rules (known as SOA tenets) for applications. 
+If you don't follow these rules you are building services but these services do not conform to SOA.
+
+WCF allows you to develop plenty of types of services. 
+You can develop interoperable SOAP services which conform to SOA or which doesn't. 
+You can develop pure .NET services with non interoperable features and you can develop REST services.
+
+Moreover in SOA service can have different meaning than in WCF. 
+In WCF service is collection of functionality exposed on endpoints. 
+In SOA the service can be whole application (set of WCF like services) - difference between small and big SOA.
+
+SOA tenets are:
+
+Boundaries are explicit - service doesn't share anything with other services (even database tables and data can't be shared)
+Services are autonomous - each service is independent, can be separately deployed and versioned
+Services share schema and contract, not class - services are described in WSDL, transported data are described in XSD,
+orchestrations (aggregation) are described in BPEL
+Services compatibility is based upon policy - WSDL contains WS-Policies to describe configuration needed for interoperability
+As you see especially first two tenets can be easily violated when building WCF service.
+
+More :
+Boundaries are explicit: a service interface needs to be clean and simple.
+Note the term ‘interface’: it is what the clients see from the outside that must be clear and concise. 
+Your code in the background can be as complex as you wish, but your clients should not be aware of it.
+
+Services are autonomous: service methods should be independent. 
+The caller should not have to call certain methods in some order to achieve a goal.
+You should strive to let the client get the relevant response in one atomic operation. 
+Service methods should be stateless: the client calls a service and “that’s the end of the story”, meaning there shouldn’t be
+any part of the system left in a partially done state.
+
+Interoperability: a service should only expose an interface, not an entire implementation.
+ Communication should happen with standard message types such as JSON or XML for complex objects or simple inputs 
+ like integers and strings for primitive inputs so that clients of very disparate types can reach your services.
+
+Policy exposure: a service interface should be well documented for clients so that they know what operations are supported, 
+how they can be called and what type of response they can expect.
+Taken From:
+https://dotnetcodr.com/2013/12/16/a-model-soa-application-in-net-part-1-the-fundamentals/
+
+Application example:
+http://www.dotnetfunda.com/articles/show/111/service-oriented-architecture-a-real-world-example-in-aspnet-with-csha

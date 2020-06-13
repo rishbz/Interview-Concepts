@@ -1,0 +1,27 @@
+# SOLID:
+https://www.codeproject.com/Articles/703634/SOLID-Architecture-Principles-Using-Simple-Csharp
+
+- Extension methods are one way of implementing open closed principal.
+
+ConcurrentDictionary - thread safe (can be safely accessed from several threads concurrently)
+HybridDictionary - optimized performance (for few items and also for many items)
+OrderedDictionary - values can be accessed via int index (by order in which items were added)
+SortedDictionary - items automatically sorted
+StringDictionary - strongly typed and optimized for strings
+
+For what it's worth, a Dictionary is (conceptually) a hash table.
+
+If you meant "why do we use the Dictionary<TKey, TValue> class instead of the Hashtable class?", then it's an easy answer: 
+Dictionary<TKey, TValue> is a generic type, Hashtable is not. That means you get type safety with Dictionary<TKey, TValue>,
+because you can't insert any random object into it, and you don't have to cast the values you take out.
+The generic Dictionary was copied from Hashtable's source
+
+And also generic collections are a lot faster as there's no boxing/unboxing.
+#Asynchoronous programming : Web api are multi thread applications - thats why number of users are able to hit Web api.
+
+Though we have limited number of threads(5000 most times), they can be easily get booked if more than 5k cleint hit webapi, given 503 error
+for subsequent requests. Hence async helps you in avoiding threads. Since we have thread pools and I/O pool, in async method, the thread is 
+released and sent back to thread pool so the await fxn complete its functionality using i/o thread- hence in this case our thread pool can now
+handle other requests without waiting for task to be completed.
+
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/performance/using-asynchronous-methods-in-aspnet-mvc-4

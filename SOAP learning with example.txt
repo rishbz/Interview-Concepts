@@ -1,0 +1,7 @@
+https://www.c-sharpcorner.com/article/calling-web-service-using-soap-request/ : Good example
+
+https://www.guru99.com/soap-simple-object-access-protocol.html : Good explainations
+
+Open url : http://localhost:4394/PSWebService.asmx?op=HelloWorld
+
+Protocols: https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html	
