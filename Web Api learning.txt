@@ -17,7 +17,7 @@ It also supports the MVC features such as routing, controllers, action results, 
 unit testing that makes it more simple and robust.
 It can be hosted with in the application or on IIS.
 It is light weight architecture and good for devices which have limited bandwidth like smart phones.
-Responses are formatted by Web API’s MediaTypeFormatter into JSON, XML or whatever format you want to add as a MediaTypeFormatter.
+Responses are formatted by Web APIâ€™s MediaTypeFormatter into JSON, XML or whatever format you want to add as a MediaTypeFormatter.
 
 To whom choose between WCF or WEB API
 
@@ -42,6 +42,18 @@ HTML not just XML as SOAP services.
 https://stackoverflow.com/questions/43775132/difference-between-wcf-web-api-wcf-rest-and-web-service
 
 WCF is used for SOAP and Web API for REST(https://stackoverflow.com/questions/9348639/wcf-vs-asp-net-web-api)
+
+Content Negotiation:
+Accept header tag :indicates what kind of response from the server the client can accept. 
+Means if in my request if i send request header as "application/json", it means i am telling web api server that give me response in json format. Web api then give response and in which format it gave response, can be checked in Content-Type header response.
+Accept tag can even have comma seperated list and weights can be given using q=30 etc to XML for example and 50 to json.
+
+Content-type header tag always is about the content of the current request or response. When content-type header is in response, it means it is telling web api sevrer responded in which format. If this header tag is in request with application/json as value, it means caller is telling that d payload i am sending in POST request is of type json.
+
+Content-type can be used both by clients and servers to identify the format of the data in their request (client) or response (server) and, therefore, help the other part interpret correctly the information.
+
+Refer: https://stackoverflow.com/questions/35722586/header-parameters-accept-and-content-type-in-a-rest-context
+
 
 [FromBody] use hoga jab primitive datatype ko me body se 
 bhejna cahta hu kyuki by default primitve type hmesha
