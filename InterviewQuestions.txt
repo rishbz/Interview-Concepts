@@ -1,0 +1,61 @@
+Lifetimes in .net core
+Why sealed class inn singelton pattern when private constructor is preventing it to be inherited
+Static connstructor - whenn do i need to make use of it
+Can i use static variable inn non static method
+Attribute vs conventional routing precendence
+ON vs Where clause in Sql query 
+Anonymous method - What are they and can they have return types?
+Lambda functions?
+
+
+#2 : Sapient interview
+Hashtable vs Dictionary - Typesafe is dictionnary
+CORS
+Do i need to regulary refresh my table index
+Versioning in .net core api different from .net framework 4.7? How?
+Thread local storage 
+GC dumb analysis
+Application layering
+Mcroservices:
+Orchestration pattern
+CQRS pattern
+SAGA patterns
+How design share market GTT trigger mechanism? Use queue mechanism.Make 3 microservice inndependent and each publishing to its own queue hence making it distrubuted
+ad independent services.
+Bounded context
+Domain modellig
+Glacier vs s3 bucket
+aws data pipeline 
+keyvault use 
+Sequence diagram vs loigcal diagram
+
+#Avalara 3rd round:
+
+FromBody and FromURI concept:Can GET has FromBody 
+Can i send complext object to GET api via FromBody 
+Versioning and content negotation
+Asp.netCore Environment variable: if connfigured on cloud, user can channge value runttime to change it to development mode to sandbox mode to prod mode.
+
+Iquerable vs IEnumerable: 
+IQuerable me filter db query me he lagta he vs ienumerable.
+For ex: c= iQuerData.Where(c=>c==3); c.Take(3) // When .Take is done, it is run on datatbase level and not onn memory level unlike ienumerable.
+
+Get Highest salary dept wise:
+Select name, sal, dept from Emp where sal in(select max(sal), dept from Emp group by dept);
+or
+with cte as (
+  select name,sal,dept, dense_rank() over(partition by dept order by sal desc) as rank;
+)
+select cte.sal, cte.name where rank = 1
+
+JWT token authentication
+Middleware
+
+#4
+
+Threads over TPL? When and why do u need it?
+How threads are troggered?
+Exception handlinng in threads
+How threads can be limited
+If old db query suddenly gets slow, what all thigs i gotta do.
+Replace of for loops in Stored procedure: How?
