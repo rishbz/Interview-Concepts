@@ -54,7 +54,7 @@ Content-type can be used both by clients and servers to identify the format of t
 
 Refer: https://stackoverflow.com/questions/35722586/header-parameters-accept-and-content-type-in-a-rest-context
 
-
+https://stackoverflow.com/questions/24625303/why-do-we-have-to-specify-frombody-and-fromuri
 [FromBody] use hoga jab primitive datatype ko me body se 
 bhejna cahta hu kyuki by default primitve type hmesha
 URI se uthane ki koshish krega.
