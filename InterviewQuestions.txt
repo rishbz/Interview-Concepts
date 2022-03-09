@@ -59,3 +59,21 @@ Exception handlinng in threads
 How threads can be limited
 If old db query suddenly gets slow, what all thigs i gotta do.
 Replace of for loops in Stored procedure: How?
+
+
+#5 Nagarro lead round:
+
+Mutex
+Monitor vs lock
+Mutext Extern: How 1 application can gain lock over other application. Basically how lock can be shared betwee two apps. Qn is bit unclear but answer was Mutex Extern.
+Can static class has constructor, can inherit or be inherited?
+Can abstract class be instantiated , can have constructor?
+Why u will use char vs varchar as column type?
+can clustered index on string type? How binnary search will happen if yes>
+Client discovery vs service discovery when to use which ?
+How can docker image be spawned itself if pod goes down? Docker file setting name?
+Microservices vs SOA
+volatile keyword, unsafe 
+delegate vs event c#
+
+
