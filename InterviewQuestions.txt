@@ -64,7 +64,7 @@ Replace of for loops in Stored procedure: How?
 #5 Nagarro lead round:
 
 Mutex
-Monitor vs lock
+Monitor vs lock : https://www.c-sharpcorner.com/article/threading-simplified-part-twelve-mutex/
 Mutext Extern: How 1 application can gain lock over other application. Basically how lock can be shared betwee two apps. Qn is bit unclear but answer was Mutex Extern.
 Can static class has constructor, can inherit or be inherited?
 Can abstract class be instantiated , can have constructor?
